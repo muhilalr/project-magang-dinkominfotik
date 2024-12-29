@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider Image dan Rekomendasi Tagar</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <style>
+      /* * {
+        border: solid red 1px;
+      } */
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- HEADER START -->
+    <header
+      class="sticky top-0 left-0 w-full flex items-center z-[9999] hover:bg-primary"
+    >
+      <div class="container relative bg-primary">
+        <div
+          class="flex items-center justify-between lg:justify-around relative"
+        >
+          <a href="https://dinkominfotik.bangka.go.id/">
+            <img
+              src="src/img/logo-dinkominfotik.png"
+              alt="Dinkominfotik"
+              width="200"
+            />
+          </a>
+
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-top-left"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
+              ></span>
+            </button>
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-4 h-screen bg-primary shadow-lg max-w-[300px] w-full -right-4 top-full overflow-auto lg:h-auto lg:block lg:right-0 lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+            >
+              <ul class="block lg:flex">
+                <li>
+                  <a
+                    href="index.html"
+                    class="text-base text-white w-full py-2 pl-5 flex hover:bg-[#303f66] lg:text-xs lg:px-4 xl:text-sm"
+                  >
+                    HOME
+                  </a>
+                </li>
+                <li class="group">
+                  <button
+                    id="profil-button"
+                    href="#profil"
+                    class="text-base text-white w-full py-2 pl-5 flex gap-3 hover:bg-[#303f66] lg:text-xs lg:px-4 xl:text-sm"
+                  >
+                    PROFIL <span class="rotate-180">▲</span>
+                  </button>
+                  <!-- PROFIL MENU START -->
+                  <div
+                    id="profil-menu"
+                    class="hidden group-hover:block bg-primary text-white p-2 shadow-lg rounded-lg lg:absolute"
+                  >
+                    <ul class="space-y-2">
+                      <li>
+                        <a
+                          href="hal-1.html"
+                          class="block py-2 hover:bg-[#303f66]"
+                          ><span class="px-4 lg:text-xs xl:text-sm"
+                            >STRUKTUR ORGANISASI</span
+                          ></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="hal-1.html"
+                          class="block py-2 hover:bg-[#303f66]"
+                          ><span class="px-4 lg:text-xs xl:text-sm"
+                            >TUGAS POKOK DAN FUNGSI</span
+                          ></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="hal-1.html"
+                          class="block py-2 hover:bg-[#303f66]"
+                          ><span class="px-4 lg:text-xs xl:text-sm"
+                            >RENSTRA</span
+                          ></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="hal-1.html"
+                          class="block py-2 hover:bg-[#303f66]"
+                          ><span class="px-4 lg:text-xs xl:text-sm"
+                            >DOKUMEN PERENCANAAN</span
+                          ></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="hal-1.html"
+                          class="block py-2 hover:bg-[#303f66]"
+                          ><span class="px-4 lg:text-xs xl:text-sm"
+                            >LAPORAN SKM</span
+                          ></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- PROFIL MENU END -->
+                </li>
+                <li class="group">
+                  <button
+                    id="berita-button"
+                    href="#berita"
+                    class="text-base text-white w-full py-2 pl-5 flex gap-3 hover:bg-[#303f66] lg:text-xs lg:px-4 xl:text-sm"
+                  >
+                    BERITA & INFORMASI <span class="rotate-180">▲</span>
+                  </button>
+                  <!-- BERITA MENU START -->
+                  <div
+                    id="berita-menu"
+                    class="hidden group-hover:block bg-primary text-white p-2 shadow-lg rounded-lg lg:absolute"
+                  >
+                    <ul class="space-y-2">
+                      <li>
+                        <a
+                          href="berita.html"
+                          class="block py-2 hover:bg-[#303f66]"
+                          ><span class="px-4 lg:text-xs xl:text-sm"
+                            >BERITA</span
+                          ></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="berita.html"
+                          class="block py-2 hover:bg-[#303f66]"
+                          ><span class="px-4 lg:text-xs xl:text-sm"
+                            >ARTIKEL</span
+                          ></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="berita.html"
+                          class="block py-2 hover:bg-[#303f66]"
+                          ><span class="px-4 lg:text-xs xl:text-sm"
+                            >FOTO GALLERY</span
+                          ></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="berita.html"
+                          class="block py-2 hover:bg-[#303f66]"
+                          ><span class="px-4 lg:text-xs xl:text-sm"
+                            >VIDEO GALLERY</span
+                          ></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="berita.html"
+                          class="block py-2 hover:bg-[#303f66]"
+                          ><span class="px-4 lg:text-xs xl:text-sm"
+                            >PUBLIKASI</span
+                          ></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="berita.html"
+                          class="block py-2 hover:bg-[#303f66]"
+                          ><span class="px-4 lg:text-xs xl:text-sm"
+                            >BANK DATA</span
+                          ></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="berita.html"
+                          class="block py-2 hover:bg-[#303f66]"
+                          ><span class="px-4 lg:text-xs xl:text-sm"
+                            >PRODUK HUKUM</span
+                          ></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- BERIITA MENU END -->
+                </li>
+                <li>
+                  <button
+                    href="berita.html"
+                    class="text-base text-white w-full py-2 pl-5 flex hover:bg-[#303f66] lg:text-xs lg:px-4 xl:text-sm"
+                  >
+                    PENGUMUMAN
+                  </button>
+                </li>
+                <li>
+                  <button
+                    href="berita.html"
+                    class="text-base text-white w-full py-2 pl-5 flex hover:bg-[#303f66] lg:text-xs lg:px-4 xl:text-sm"
+                  >
+                    BANK DATA
+                  </button>
+                </li>
+                <li class="group">
+                  <button
+                    href="#layanan"
+                    class="text-base text-white w-full py-2 pl-5 flex gap-3 hover:bg-[#303f66] lg:text-xs lg:px-4 xl:text-sm"
+                  >
+                    LAYANAN <span class="rotate-180">▲</span>
+                  </button>
+                  <!-- LAYANAN MENU START -->
+                  <div
+                    id="berita-menu"
+                    class="hidden group-hover:block bg-primary text-white p-2 shadow-lg rounded-lg lg:absolute"
+                  >
+                    <ul class="space-y-2">
+                      <li>
+                        <a
+                          href="berita.html"
+                          class="block py-2 hover:bg-[#303f66]"
+                          ><span class="px-4 lg:text-xs xl:text-sm"
+                            >DULANG EMAS</span
+                          ></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- LAYANAN MENU END -->
+                </li>
+                <li class="group">
+                  <button
+                    href="#ppid"
+                    class="text-base text-white w-full py-2 pl-5 flex gap-3 hover:bg-[#303f66] lg:text-xs lg:px-4 xl:text-sm"
+                  >
+                    PPID <span class="rotate-180">▲</span>
+                  </button>
+                  <!-- PPID MENU START -->
+                  <div
+                    id="berita-menu"
+                    class="hidden group-hover:block bg-primary text-white p-2 shadow-lg rounded-lg lg:absolute"
+                  >
+                    <ul class="space-y-2">
+                      <li>
+                        <a
+                          href="berita.html"
+                          class="block py-2 hover:bg-[#303f66]"
+                          ><span class="px-4 lg:text-xs xl:text-sm"
+                            >PROFIL PPID</span
+                          ></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- PPID MENU END -->
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- BERITA UTAMA DAN TAGAR START -->
+    <div class="container p-5 flex flex-col md:flex-row gap-5">
+      <!-- Kolom Kiri: Slider Gambar -->
+      <div class="flex-1 bg-white shadow-md rounded-lg p-5">
+        <h2 class="text-2xl font-semibold mb-4">Slider Gambar</h2>
+        <div class="relative">
+          <div id="slider" class="overflow-hidden rounded-lg relative">
+            <div class="slide relative">
+              <img
+                src="src/img/view-1.jfif"
+                alt="Image 1"
+                class="w-full rounded-lg"
+              />
+              <div
+                class="overlay absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-5"
+              >
+                <h1 class="font-bold text-sm xl:text-lg mb-1">
+                  J U D U L B E R I T A
+                </h1>
+                <p class="font-medium text-xs xl:text-sm text-slate-200 mb-2">
+                  Sosial | 20 Jam Yang Lalu | RILIS HUMAS JABAR, Rep Teguh
+                </p>
+                <button
+                  class="bg-primary hover:bg-[#29385c] text-xs xl:text-sm font-medium border-gray-200 text-white py-2 px-5 rounded-lg cursor-pointer"
+                >
+                  Baca Selengkapnya
+                </button>
+              </div>
+            </div>
+            <div class="slide hidden relative">
+              <img
+                src="src/img/view-2.jfif"
+                alt="Image 2"
+                class="w-full rounded-lg"
+              />
+              <div
+                class="overlay absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-5"
+              >
+                <h1 class="font-bold text-sm xl:text-lg mb-1">
+                  J U D U L B E R I T A
+                </h1>
+                <p class="font-medium text-xs xl:text-sm text-slate-200 mb-2">
+                  Teknologi | 5 Jam Yang Lalu | RILIS HUMAS JABAR, Rep Budi
+                </p>
+                <button
+                  class="bg-primary hover:bg-[#29385c] text-xs xl:text-sm font-medium border-gray-200 text-white py-2 px-5 rounded-lg cursor-pointer"
+                >
+                  Baca Selengkapnya
+                </button>
+              </div>
+            </div>
+            <div class="slide hidden relative">
+              <img
+                src="src/img/view-3.jfif"
+                alt="Image 3"
+                class="w-full rounded-lg"
+              />
+              <div
+                class="overlay absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-5"
+              >
+                <h1 class="font-bold text-sm xl:text-lg mb-1">
+                  J U D U L B E R I T A
+                </h1>
+                <p class="font-medium text-xs xl:text-sm text-slate-200 mb-2">
+                  Ekonomi | 2 Hari Yang Lalu | RILIS HUMAS JABAR, Rep Dina
+                </p>
+                <button
+                  class="bg-primary hover:bg-[#29385c] text-xs xl:text-sm font-medium border-gray-200 text-white py-2 px-5 rounded-lg cursor-pointer"
+                >
+                  Baca Selengkapnya
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-0 flex items-center justify-between px-3">
+            <button id="prev" class="bg-gray-800 text-white p-2 rounded-full">
+              ‹
+            </button>
+            <button id="next" class="bg-gray-800 text-white p-2 rounded-full">
+              ›
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolom Kanan: Rekomendasi Tagar -->
+      <div class="md:w-1/3 bg-white shadow-md rounded-lg p-5">
+        <h2 class="text-2xl font-semibold mb-4">Rekomendasi Tagar</h2>
+        <ul class="space-y-2">
+          <li>
+            <a href="#" class="text-blue-600 hover:underline">#BeritaTerkini</a>
+          </li>
+          <li>
+            <a href="#" class="text-blue-600 hover:underline">#Peristiwa</a>
+          </li>
+          <li>
+            <a href="#" class="text-blue-600 hover:underline">#Teknologi</a>
+          </li>
+          <li>
+            <a href="#" class="text-blue-600 hover:underline">#Pendidikan</a>
+          </li>
+          <li>
+            <a href="#" class="text-blue-600 hover:underline">#Kesehatan</a>
+          </li>
+          <li>
+            <a href="#" class="text-blue-600 hover:underline">#Olahraga</a>
+          </li>
+          <li>
+            <a href="#" class="text-blue-600 hover:underline">#Ekonomi</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- BERITA UTAMA DAN TAGAR END -->
+
+    <!-- BERITA START -->
+    <div class="container">
+      <div class="p-5 bg-white rounded-lg">
+        <h1 class="text-center text-xl font-bold">Search & Filter</h1>
+        <h2 class="text-center text-lg font-medium text-gray-400">
+          Fasilitas pencarian data
+        </h2>
+
+        <form action="" class="flex mx-auto max-w-md flex-col gap-3 mb-8">
+          <label for="judul" class="block font-bold">Judul</label>
+          <input class="rounded-md" type="text" name="" id="judul" />
+          <label for="tanggal" class="block font-bold">Tanggal</label>
+          <input class="rounded-md" type="text" name="" id="tanggal" />
+          <p>Format : YYYY-MM-DD, Ex : 2014-12-31</p>
+
+          <div class="flex justify-center items-center gap-3">
+            <button class="px-5 py-2 bg-primary text-white rounded-md">
+              Apply
+            </button>
+            <button class="px-5 py-2 bg-primary text-white rounded-md">
+              Reset
+            </button>
+          </div>
+        </form>
+        <ul>
+          <li
+            class="p-3 border-y border-gray-200 flex flex-col md:flex-row items-center gap-4 mb-3"
+          >
+            <img
+              class="rounded-md"
+              width="250"
+              src="https://asset-2.tstatic.net/bangka/foto/bank/images/Haris-tinjau-anak-stunting-di-Gunung-Muda.jpg"
+              alt=""
+            />
+            <div class="flex flex-col gap-1">
+              <div class="mb-1">
+                <span
+                  class="bg-primary text-xs text-white font-bold py-2 px-3 rounded-md"
+                  >DINKOMINFOTIK</span
+                >
+              </div>
+              <p class="font-medium text-gray-400 text-xs md:text-sm">
+                25/10/2024
+              </p>
+              <a href="#" class="font-bold text-xs md:text-base hover:underline"
+                >Jumlah Anak Stunting di Desa Gunung Muda Kabupaten Bangka
+                Menurun Drastis</a
+              >
+              <p class="font-medium text-xs md:text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                culpa sed repellendus consequatur ad ipsam ullam omnis aliquid
+                illum repudiandae.
+              </p>
+            </div>
+          </li>
+          <li
+            class="p-3 border-b border-gray-200 flex flex-col md:flex-row items-center gap-4 mb-3"
+          >
+            <img
+              class="rounded-md"
+              width="250"
+              src="https://asset-2.tstatic.net/bangka/foto/bank/images/Haris-tinjau-anak-stunting-di-Gunung-Muda.jpg"
+              alt=""
+            />
+            <div class="flex flex-col gap-1">
+              <div class="mb-1">
+                <span
+                  class="bg-primary text-xs text-white font-bold py-2 px-3 rounded-md"
+                  >DINKOMINFOTIK</span
+                >
+              </div>
+              <p class="font-medium text-gray-400 text-xs md:text-sm">
+                25/10/2024
+              </p>
+              <a href="#" class="font-bold text-xs md:text-base hover:underline"
+                >Jumlah Anak Stunting di Desa Gunung Muda Kabupaten Bangka
+                Menurun Drastis</a
+              >
+              <p class="font-medium text-xs md:text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                culpa sed repellendus consequatur ad ipsam ullam omnis aliquid
+                illum repudiandae.
+              </p>
+            </div>
+          </li>
+          <li
+            class="p-3 border-b border-gray-200 flex flex-col md:flex-row items-center gap-4 mb-3"
+          >
+            <img
+              class="rounded-md"
+              width="250"
+              src="https://asset-2.tstatic.net/bangka/foto/bank/images/Haris-tinjau-anak-stunting-di-Gunung-Muda.jpg"
+              alt=""
+            />
+            <div class="flex flex-col gap-1">
+              <div class="mb-1">
+                <span
+                  class="bg-primary text-xs text-white font-bold py-2 px-3 rounded-md"
+                  >DINKOMINFOTIK</span
+                >
+              </div>
+              <p class="font-medium text-gray-400 text-xs md:text-sm">
+                25/10/2024
+              </p>
+              <a href="#" class="font-bold text-xs md:text-base hover:underline"
+                >Jumlah Anak Stunting di Desa Gunung Muda Kabupaten Bangka
+                Menurun Drastis</a
+              >
+              <p class="font-medium text-xs md:text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                culpa sed repellendus consequatur ad ipsam ullam omnis aliquid
+                illum repudiandae.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- BERITA END -->
+
+    <footer
+      class="container bg-primary mt-16 px-10 pt-6 pb-10 flex flex-col md:flex-row md:justify-between md:pb-6 md:items-center"
+    >
+      <a href="https://dinkominfotik.bangka.go.id/">
+        <img src="/src/img/logo-dinkominfotik.png" alt="" width="250" />
+      </a>
+
+      <div
+        class="flex flex-col mt-4 md:mt-0 md:border-l-2 md:border-slate-500 md:pl-3"
+      >
+        <p class="font-bold text-white">Alamat :</p>
+        <p class="font-normal text-sm text-slate-300">Jalan Jend. A. Yani</p>
+        <p class="font-normal text-sm text-slate-300">Kabupaten Bangka</p>
+      </div>
+
+      <div
+        class="flex flex-col mt-6 md:mt-0 md:border-l-2 md:border-slate-500 md:pl-3"
+      >
+        <p class="font-bold text-white">Kontak :</p>
+        <p class="font-normal text-sm text-slate-300">Telp. +62(0717) 95336</p>
+        <p class="font-normal text-sm text-slate-300">
+          Email : dinkominfotik@bangka.go.id
+        </p>
+      </div>
+    </footer>
+
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="src/js/script.js"></script>
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        slides[currentSlide].classList.add("hidden");
+        currentSlide = index;
+        slides[currentSlide].classList.remove("hidden");
+      }
+
+      function nextSlide() {
+        showSlide((currentSlide + 1) % slides.length);
+      }
+
+      document.getElementById("next").addEventListener("click", nextSlide);
+      document.getElementById("prev").addEventListener("click", () => {
+        showSlide((currentSlide - 1 + slides.length) % slides.length);
+      });
+
+      // Slide otomatis setiap 3 detik
+      setInterval(nextSlide, 3000);
+    </script>
+  </body>
+</html>
